@@ -1,0 +1,773 @@
+<!DOCTYPE html><html lang="en"><head>
+
+    <!-- Google tag (gtag.js) -->
+    <script> window.dataLayer = window.dataLayer || [];
+    </script>
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <title>Luminara Skin</title>
+    <meta name="csrf-token" content="Yb1byNBFoYa95En392S9unKQAi704B9BhyyS1dP0">
+    <link rel="stylesheet" type="text/css" href="css/style%EF%B9%96ver=6.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/twentytwenty.css">
+        <style>.privacy {
+            padding: 8rem 0 4rem;
+            color: #1f1f1f;
+            text-align: justify;
+            scroll-margin-top: 8rem;
+        }
+
+        .privacy__wrapper {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        .privacy__header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .privacy__label {
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-bottom: 0.75rem;
+        }
+
+        .privacy__title {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy__updated {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .privacy__toc {
+            background: #f3f4f6;
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 3rem;
+        }
+
+        .privacy__toc h2 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .privacy__toc ol {
+            display: grid;
+            gap: 0.5rem;
+            padding-left: 1.25rem;
+            margin: 0;
+        }
+
+        .privacy__toc a {
+            color: #1f1f1f;
+            text-decoration: none;
+        }
+
+        .privacy__toc a:hover,
+        .privacy__toc a:focus {
+            color: #4255cc;
+        }
+
+        .privacy-section + .privacy-section {
+            margin-top: 2.5rem;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.375rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .privacy-section p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-list {
+            padding-left: 1.25rem;
+            margin: 1rem 0;
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .privacy-list strong {
+            font-weight: 600;
+        }
+
+        .privacy-back-to-top {
+            display: inline-block;
+            margin-top: 3rem;
+            color: #4255cc;
+            text-decoration: none;
+        }
+
+        .privacy-back-to-top:hover,
+        .privacy-back-to-top:focus {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .privacy {
+                padding: 6rem 0 3rem;
+                scroll-margin-top: 6rem;
+            }
+
+            .privacy__title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <style>.pkg-price{
+            font-size: 17px;
+            line-height: 17px;
+            color: #575757;
+        }
+        .pkg-price span{
+            position: relative;
+            padding: 0 5px;
+        }
+        .cart-lst {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -7.4px;
+            right: 10.2px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: none;
+            text-align: center;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: bold;
+        }
+
+        .secureCheck {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .termsCheck {
+            margin-top: 1.8rem;
+        }
+
+        #checkoutBtn {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body class="cart-is">
+    <div class="cart-overlay" style="display: none;"></div>
+<div class="drawer" id="cartDrawer">
+    <div class="drawer__header">
+        <div class="table-cell">Shopping Cart</div>
+        <div>
+            <svg width="20" height="20" viewBox="0 0 24 24" class="cross-icon cart-close" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.1518 4.31359L4.22676 4.22676C4.50161 3.9519 4.93172 3.92691 5.2348 4.1518L5.32163 4.22676L12 10.9048L18.6784 4.22676C18.9807 3.92441 19.4709 3.92441 19.7732 4.22676C20.0756 4.5291 20.0756 5.01929 19.7732 5.32163L13.0952 12L19.7732 18.6784C20.0481 18.9532 20.0731 19.3833 19.8482 19.6864L19.7732 19.7732C19.4984 20.0481 19.0683 20.0731 18.7652 19.8482L18.6784 19.7732L12 13.0952L5.32163 19.7732C5.01929 20.0756 4.5291 20.0756 4.22676 19.7732C3.92441 19.4709 3.92441 18.9807 4.22676 18.6784L10.9048 12L4.22676 5.32163C3.9519 5.04678 3.92691 4.61667 4.1518 4.31359L4.22676 4.22676L4.1518 4.31359Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Rest of the cart drawer content -->
+    <div class="drower-mdlbx"><div><div class="empty-cart-message">Your cart is empty</div></div></div>
+    <div class="drower-btm" style="display: none;">
+        <div class="cart-smry">
+            <p class="cart-prc-p1 cart-prc-p2">Total <span>$0.00</span></p>
+            <div class="superfast-text"><img src="">Super fast delivery 48H</div>
+        </div>
+        <a href="index.html" class="chk-btn">Proceed To Checkout</a>
+        <p class="continue-btn"><a href="index.html#sec2">Continue Shopping</a></p>
+    </div>
+</div>
+    <div class="topStrip">
+    <div class="container">
+        <p>Free Shipping On All Order Above $100</p>
+        
+    </div>
+</div>
+
+<div class="show-tab">
+    <ul class="mobilemenu">
+        <li>
+            <a href="javascript:void(0)" class="menuOpen">Shop All</a>
+            <ul class="dropdown-mobile">
+                <li><a href="rewind.html">Rewind<br><span>Lift. Tighten. Glow.</span></a></li>
+                <li><a href="revive.html">Revive<br><span>Brighten. Protect. Soothe.</span></a></li>
+                <li><a href="restore.html">Restore<br><span>Prevent. Boost. Reduce.</span></a></li>
+                <li><a href="renew.html">Renew<br><span>Soothe. Tighten. Hydrate.</span></a></li>
+                <li><a href="seasonal-specials.html">Seasonal Specials<br><span>Try More. Save More.</span></a></li>
+                <!--<li><a href="/remove">Remove<br /><span>Uproot. Nourish. Safeguard.</span></a></li>-->
+            </ul>
+        </li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="javascript:bookmarkscroll.scrollTo('reviews')">Reviews</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+</div>
+
+<div class="top-fix-bar">
+    <div class="header">
+        <div class="container">
+            <div class="header-inr"></div>
+            <a href="index.html"><img src="images/logo_luminara.png" class="logo" alt="" width="228" height="170"></a>
+            <a href="index.html#sec2" class="header_btn hide-mob">Shop Now</a>
+            <ul class="hdr-rght">
+                <li class="cart-lst">
+                    <a href="javascript:void(0);" id="cart_btn" class="cart_btn">
+                        <img src="images/cart-ic.png" alt="" width="40" height="48">
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="mainMenu hide-tab">
+                <li>
+                    <a href="javascript:void(0)">Shop All <img src="images/down-menu-arw.png" alt="" width="17" height="9"></a>
+                    <div class="dropMenu2">
+                        <div class="container">
+                            <div class="megaMenu">
+                                <ul class="tips-list">
+                                <li>
+                                        <a href="rewind.html">
+                                            <img src="images/rewind-btl.png" alt="" class="tips-img" width="488" height="580">
+                                            <div>
+                                                <p class="saving-tips-title">Rewind<br><span>Lift. Tighten. Glow.</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="revive.html">
+                                            <img src="images/revive-btl.png" alt="" class="tips-img" width="488" height="580">
+                                            <div>
+                                                <p class="saving-tips-title">Revive<br><span>Brighten. Protect. Soothe.</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="restore.html">
+                                            <img src="images/restore-btl.png" alt="" class="tips-img" width="488" height="580">
+                                            <div>
+                                                <p class="saving-tips-title">Restore<br><span>Prevent. Boost. Reduce.</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="renew.html">
+                                            <img src="images/renew-btl.png" alt="" class="tips-img" width="488" height="580">
+                                            <div>
+                                                <p class="saving-tips-title">Renew<br><span>Soothe. Tighten. Hydrate.</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="seasonal-specials.html">
+                                            <img src="images/bundle.png" alt="" class="tips-img" width="488" height="580">
+                                            <div>
+                                                <p class="saving-tips-title">Seasonal Specials<br><span>Try More. Save More.</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!--<li>
+                                        <a href="/remove">
+                                            <img src="images/remove-btl.png" alt="" class="tips-img" width="488" height="580">
+                                            <div>
+                                                <p class="saving-tips-title">Remove<br /><span>Uproot. Nourish. Safeguard.</span></p>
+                                            </div>
+                                        </a>
+                                    </li>-->
+                                </ul>
+                                <div class="clearall"></div>
+                                <p class="saving-tips-heading hide-desk" style="margin-top:10px;"><a href="#" style="float:left;">View all</a></p>
+                            </div>
+                        </div>
+                        <div class="menu-close hide-desk show-tab">X</div>
+                    </div>
+                </li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="javascript:bookmarkscroll.scrollTo('reviews')">Reviews</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+            <div class="mob-mnu-ic show-tab hide-desk">
+                <button class="dl-trigger" id="mobMenuBtn">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <section class="privacy" id="privacy">
+    <div class="container privacy__wrapper">
+        <header class="privacy__header">
+            <p class="privacy__label">Luminara Skin LLC</p>
+            <h1 class="privacy__title">Privacy Policy</h1>
+            <p class="privacy__updated">Last Updated: October 20, 2025</p>
+        </header>
+
+        <article id="overview" class="privacy-section">
+            <p>Luminara Skin LLC (collectively, “Luminara Skin” “our,” “we,” or “us”) values and respects the
+                privacy of its customers and visitors. While operating our business and interacting with you, we
+                collect, use, and share personal information as disclosed in this privacy policy (“Privacy Policy”).
+                Your use of <a href="index.html">https://tryluminara.com</a> including any sub-domains
+                thereof, affiliated websites, and mobile applications (the “Site”), which we own or maintain are
+                governed by this Privacy Policy.</p>
+            <p>This Privacy Policy provides you with detailed information about how Luminara Skin and its
+                subsidiaries, divisions, affiliates, brands and other companies that link to this Privacy Policy
+                collect, use, share, and protect your information, and describes your choices and rights. This Privacy
+                Policy also applies to information we receive from business partners and other third parties. We
+                encourage you to read this Privacy Policy carefully and if you have any questions to contact us using
+                the methods listed below.</p>
+            <p>We reserve the right to make changes to this Privacy Policy at any time and for any reason. Any changes
+                will be reflected in a revised Privacy Policy posted on the Site and we will alert you that there has
+                been a change by updating the “Last Updated” date displayed on the Privacy Policy. You are responsible
+                for periodically visiting our Site and this Privacy Policy to check for any changes.</p>
+        </article>
+
+        <article id="collecting-your-information" class="privacy-section">
+            <h2>Collecting Your Information</h2>
+            <p>We may collect information about you in a variety of ways, including when you provide information
+                directly to us or when you visit our Site. The categories of information we collect, including in the
+                last 12 months, include:</p>
+            <p><strong>Categories of Information You May Provide to Us.</strong> This is information that you choose to
+                provide directly to us, such as when you create an account, make a purchase, engage with our customer
+                service team, fill out forms, or otherwise use the Site. Categories of information you provide to us
+                include: (1) commercial information, such as date of purchase, items purchased, and purchase amount; (2)
+                customer service information, such as customer support conversations, feedback, and responses to
+                surveys; (3) customer records information, such as your name, email, phone number, and residential
+                address; (4) financial information, such as your credit card number and other payment information; and
+                (5) any other information you may provide to us.</p>
+            <p><strong>Categories of Information We Collect About You.</strong> OOur servers automatically collect
+                information when you contact us or when you visit, use, or browse the Site. Categories of information we
+                collect about you include: (1) device information, such as your IP address, operating system, browser
+                version, language preferences, referring URLs, country, and location; (2) analytics data and inferences
+                about you, your purchases, and your Site usage; and (3) browsing information, such as the pages you
+                visit on the Site, the dates and times you visit the Site, information about how and when you use our
+                Site, and other technical information. If you access the Site from a mobile device, we will collect
+                information about the type of mobile device you use. </p>
+            <p>Your use of our Site and services is strictly your choice. If you prefer that we do not receive the
+                above-described information, please do not submit it to us. This means you shouldn’t participate in the
+                applicable activities on, or use the applicable features available through, our Site or services. By not
+                participating or not providing certain information, you may limit your ability to take full advantage of
+                our Site and services.</p>
+            <p>We may collect deidentified data or derive inferences from the categories of personal information
+                described in this Privacy Policy. We will not reidentify, or attempt to reidentify, any deidentified
+                information that we collect as described in this Privacy Policy. </p>
+        </article>
+
+        <article id="using-your-information" class="privacy-section">
+            <h2>Using Your Information</h2>
+            <p>We use the personal information we collect only in the manner and through the means allowed by applicable
+                law. That means we determine whether we have a lawful basis or legitimate business purpose to use your
+                personal information before doing so. Generally speaking, we collect personal data from you where we
+                have your consent to do so, where we need the personal data to perform a contract with you, or where the
+                processing is in our legitimate interests and not overridden by your data protection interests or
+                fundamental rights and freedoms. </p>
+            <p>We collect and use information for business and commercial purposes, include the following:</p>
+            <ul class="privacy-list">
+                <li><strong>Operate and Improve our Business.</strong> We use your information to provide our services
+                    to you, to increase the efficiency of our business, and to improve our Site, products, and services.
+                </li>
+                <li><strong>Process Transactions and Facilitate Customer Service.</strong> We use your information to
+                    complete purchases, to send you confirmations and administrative messages, and to perform customer
+                    service functions.
+                </li>
+                <li><strong>Marketing and Advertising.</strong> We use your information to market our services to you,
+                    to personalize the Site, and to deliver information to you that we think may be of interest to you,
+                    such as articles, news, or information about various promotions and products.
+                </li>
+                <li><strong>Analytics.</strong> We use your information to help us better understand your interests and
+                    needs, such as by engaging in analysis and research regarding use of the Site and our products and
+                    services. We may monitor and analyze usage and trends to compile statistical information which we
+                    may use internally or provide to third parties.
+                </li>
+                <li><strong>Security and Fraud Prevention.</strong> We use your information to perform security and
+                    fraud prevention functions for the Site.
+                </li>
+                <li><strong>Required by Law.</strong> We use your information as required by law, for compliance
+                    purposes, or as we deem necessary to investigate or remedy any actual or potential violation of our
+                    policies or to protect the rights, property, and safety of Luminara Skin or others as we deem
+                    appropriate.
+                </li>
+            </ul>
+        </article>
+
+        <article id="sharing-your-information" class="privacy-section">
+            <h2>Sharing Your Information</h2>
+            <p>We may share the categories of information described above with third parties that perform services for
+                us or on our behalf. We do not control these third parties or how information is used. The categories of
+                third parties that we share information with, including in the past 12 months, include: (1) service
+                providers and suppliers; (2) marketing partners and advertising networks; (3) data analytics providers;
+                (4) payment processing providers; (5) our affiliates and subsidiaries; (6) social networks; and (7)
+                other parties in connection with business transfers and for legal, safety, fraud prevention, and
+                enforcement reasons.</p>
+            <p>We share your information with these third parties for the following business purposes:</p>
+            <ul class="privacy-list">
+                <li><strong>Operate and Improve our Business.</strong> We share your information with third party
+                    service providers that help us provide our services to you, increase the efficiency of our business,
+                    and improve our products and services.
+                </li>
+                <li><strong>Process Transactions and Facilitate Customer Service.</strong> We may share information with
+                    third-party providers that process payments on our behalf, help provide the Site and perform
+                    customer service functions.
+                </li>
+                <li><strong>Marketing and Advertising.</strong> We share information with third-party providers that
+                    support online advertising, data co-operatives, mobile advertising, data analytics, social media
+                    engagement, advertising networks or any other activity that may be considered cross-behavioral
+                    advertising or direct marketing.
+                </li>
+                <li><strong>Analytics.</strong> We may allow third-party service providers to use tracking technology on
+                    the Site, which will enable them to collect information about how you use the Site over time. This
+                    information may be used to, among other things, analyze and track data, determine the popularity of
+                    certain content, and better understand your online activity.
+                </li>
+                <li><strong>Security and Fraud Prevention.</strong> We share information with third parties that provide
+                    security and fraud protection services for us.
+                </li>
+                <li><strong>Required By Law.</strong> We may share your information as permitted or required by any
+                    applicable law in response to a subpoena or other legal process, or as we deem necessary to
+                    investigate or remedy any actual or potential violation of our policies, or to protect the rights,
+                    property, and safety of Luminara Skin or others, as we deem appropriate.
+                </li>
+                <li><strong>Transfer of Assets.</strong> If we reorganize or otherwise transfer some or all of the Site
+                    or our assets to another organization (such as in the course of a merger, dissolution, or
+                    liquidation), your information may be shared with the transferee; however, we will ask the
+                    transferee to honor commitments we made in this Privacy Policy.
+                </li>
+            </ul>
+            <p>We generally do not sell information as the term “sell” is traditionally understood. However, we do share
+                data with third parties for marketing and advertising purposes, which may be interpreted as a “sale” or
+                “sharing” under certain laws. <strong>In the past 12-months, we have shared the following categories of
+                    information to third parties for marketing and advertising purposes: (1) persistent identifiers,
+                    such as
+                    unique device identifiers, email addresses, account information, IP addresses, information related
+                    to
+                    your browser and operating system, or any information that you provided through the Site; and (2)
+                    user
+                    activity data, such data generated through your activities on the Site.</strong></p>
+        </article>
+
+        <article id="cookies-and-tracking" class="privacy-section">
+            <h2>Cookies, Web Beacons, and Tracking Technologies</h2>
+            <p>The Site uses cookies, web beacons, and other tracking technologies to collect, use, and share your
+                information with third parties as described in this Privacy Policy. These technologies are useful for
+                storing your preferences and settings, enabling you to sign-in, gathering information such as browser
+                type and operating system, providing interest-based advertising, combating fraud, analyzing how our Site
+                or services perform, and fulfilling other legitimate purposes.</p>
+            <p>Cookies used on this Site may include: (1) required cookies used to perform essential Site functions,
+                such as storing your preferences and settings; (2) social media cookies to show you ads and content
+                based on your social media profiles and activities on other Sites; (3) analytics cookies to better
+                understand how you use the Site and to improve our Site and services; (4) advertising cookies to show
+                you ads that are relevant to you. If you previously provided information to us, a unique identifier in
+                the cookie may associate the information collected via the cookie with your information. We may share
+                aggregate cookie and tracking information that does not directly identify you with third parties.</p>
+            <p>Some content on the Site may be provided by third parties that use cookies in conjunction with other
+                tracking technologies to collect information about you when you use the Site, which enables them to
+                provide targeted advertising to you. We do not control these third parties’ tracking technologies or how
+                they may be used. We may display certain advertising offers on the Site or allow service providers,
+                advertisers, ad networks, or other third parties to advertise on the Site. Additionally, we may use
+                third-party software to serve ads on the Site, implement email marketing campaigns, and manage other
+                interactive marketing initiatives. This third-party software may use cookies, web beacons, or similar
+                tracking technology to help manage and optimize your online experience with us.</p>
+            <p>Most web browsers are set to accept cookies by default. You can usually choose to set your browser to
+                disable or reject cookies. Be aware that disabling or rejecting cookies could affect the availability
+                and functionality of the Site or certain portions of the Site. Please note that we may still use
+                information we’ve collected from cookies prior to you disabling them; however, we will not collect any
+                further information from the disabled cookies.</p>
+        </article>
+
+        <article id="data-security" class="privacy-section">
+            <h2>Data Security</h2>
+            <p>We have implemented measures designed to secure your information from accidental loss and from
+                unauthorized access, use, alteration, and disclosure. The safety and security of your information also
+                depends on you. Where we have given you (or where you have chosen) a password for access to certain
+                parts of our Site, you are responsible for keeping this password confidential. We ask you not to share
+                your password with anyone.</p>
+            <p>Unfortunately, the transmission of information via the internet is not completely secure. Although we do
+                our best to protect your personal information, we cannot guarantee the security of your personal
+                information transmitted to our Site. Any transmission of personal information is at your own risk. We
+                are not responsible for circumvention of any privacy settings or security measures contained on the
+                Site.</p>
+        </article>
+
+        <article id="policy-for-children" class="privacy-section">
+            <h2>Policy for Children</h2>
+            <p>We do not use the Site to solicit information from or market to children under the age of 18. By using
+                the Site, you represent that you are at least 18 years of age. We encourage parents and legal guardians
+                to monitor their children’s internet usage and to instruct their children never to provide personal
+                information through the Site or any other website without parental consent. If you believe a child has
+                provided personal information to us via the Site, please contact us and we will use reasonable efforts
+                to locate and delete the information.</p>
+        </article>
+
+        <article id="promotional-messaging" class="privacy-section">
+            <h2>Promotional Messaging</h2>
+            <p>By signing up to our promotional lists, you are giving your express permission to Luminara Skin and
+                its agents or vendors the right to contact you with targeted advertising materials by email, text
+                message (SMS), telephone or cellphone, including the use of automated, predictive, programmable, or
+                similar automatic dialers or dialing software, or any other means of communication we may utilize to
+                provide promotional offers. Your consent is not a condition of purchase. To the extent applicable, you
+                expressly acknowledge that you are solely responsible for all charges billed by your mobile service
+                provider.</p>
+            <p>If you no longer wish to receive promotional communications by email, please follow the unsubscribe link
+                located at the end of an email message. If you no longer wish to receive promotional messages by text,
+                reply STOP, END, CANCEL, UNSUBSCRIBE, or QUIT to any mobile message from Luminara Skin. We may share
+                your data, including your SMS opt-in or consent status, with third parties that help us provide our
+                messaging services, including but not limited to platform providers, phone companies, and any other
+                vendors who assist us in the delivery of text messages.</p>
+        </article>
+
+        <article id="do-not-track" class="privacy-section">
+            <h2>Do Not Track Signals</h2>
+            <p><strong>Do Not Track (“DNT”) is a privacy preference that users can set to have their Internet browser
+                    automatically send a signal to our Site to request we not track browsing activity across different
+                    sites. There is, however, currently no universal standard for sending and receiving DNT signals. As
+                    such, we cannot promise that we respond to all DNT signals but do recognize and respond when
+                    required by
+                    applicable privacy laws, such as when HTTP header fields or Java objects are used.</strong></p>
+        </article>
+
+        <article id="international-submissions" class="privacy-section">
+            <h2>Submitting Information from Outside the United States and Transferring Information</h2>
+            <p><strong>We control and operate the Site and our services from within the United States of America (the
+                    “U.S.”).
+                    Your information may be transferred to, and processed in, the U.S. or any other country in which our
+                    we
+                    or our vendors maintain facilities. To the extent applicable, we have taken appropriate safeguards
+                    for
+                    such transfers and rely on the latest version of the Standard Contractual Clauses promulgated by the
+                    European Commission (along with the UK Addendum, where appropriate), for transfers of personal data
+                    from
+                    the European Economic Area (EEA), United Kingdom (UK), or Switzerland to the U.S. and for onward
+                    transfers from the U.S. Note that the English language version of this Privacy Policy is the
+                    controlling
+                    version regardless of any translation you may attempt.</strong></p>
+        </article>
+
+        <article id="links-third-party" class="privacy-section">
+            <h2>Links to Other Websites and Third-Party Practices</h2>
+            <p>This Site may contain links to third party websites. It is our intent to provide links only to other
+                quality websites. However, we have no control over these linked websites or, for that matter, any third
+                parties. Any information collected by websites, other than our Site, is not covered by this Privacy
+                Policy. We are not responsible for the content or privacy and security practices and policies of any
+                third parties, including other websites that may be linked to or from the Site. We encourage you to read
+                the provisions of privacy policies on other websites before providing them with your personal
+                information.</p>
+        </article>
+
+        <article id="your-privacy-rights" class="privacy-section">
+            <h2>Your Privacy Rights</h2>
+            <p>Where applicable based on privacy laws in your jurisdiction, you may have certain rights you can request
+                that we fulfill. These rights may include:</p>
+            <ul class="privacy-list">
+                <li><strong>The Right to Know.</strong> You may request that we disclose the information that we
+                    collected about you and identify the purposes for which the information was used, whether and to
+                    whom it was shared, and what sources it was obtained from.
+                </li>
+                <li><strong>The Right to Delete.</strong> You may request that we delete information that we maintain
+                    about you, subject to certain exceptions.
+                </li>
+                <li><strong>The Right to Correct.</strong> You may request that we correct information that we store
+                    about you.
+                </li>
+                <li><strong>The Right to Opt-Out of Your Personal Information Being Sold or Shared.</strong> You may
+                    request that we do not sell or share your information.
+                </li>
+                <li><strong>Right to Opt-Out of Targeted Advertising.</strong> You may request that we opt you out of
+                    targeted advertising.
+                </li>
+                <li><strong>Right to Data Portability.</strong> You may request that we provide you with a copy of your
+                    information on file with us.
+                </li>
+                <li><strong>Right to Withdraw Consent from Processing.</strong> If we have collected and processed your
+                    information based on your consent, you may withdraw your consent at any time.
+                </li>
+                <li><strong>The Right to Object to Automated Decision Making.</strong> Where a decision is made that is
+                    solely based on an automated system, you may request a manual review instead.
+                </li>
+                <li><strong>The Right to Restrict or Object to Processing.</strong> You have the right to object to our
+                    basis of processing where we rely on legitimate interest. Additionally, where applicable, you may
+                    request that we restrict the processing for only limited activity.
+                </li>
+            </ul>
+
+            <h3>How to Exercise Your Privacy Rights</h3>
+            <p>In order to exercise any of the rights detailed in this Privacy Policy, please contact us at
+                Help@Tryluminara.com. Exercising your rights under this Privacy Policy will not result in any
+                discrimination by us. We will treat you the same as any other user.</p>
+            <p>We may require additional information from you to help us verify your identity and state or country of
+                residence, and to process your request. The verification steps may vary depending on the sensitivity of
+                the information and whether you have an account with us. If we are unable to verify your identity, we
+                may deny your requests to know or delete. You can designate an authorized agent to submit requests on
+                your behalf. However, we will require written proof of the agent’s permission to do so and verify your
+                identity directly.</p>
+            <p>If you make a request to exercise any of the applicable data access rights and we are unable to comply
+                with your request, or if you disagree with or dispute our decision, you may request to appeal our
+                decision. To appeal any data access rights decision, please contact us by emailing us at
+                Help@Tryluminara.com with the subject line “Data Access Request Appeal.” If you are still not satisfied
+                with our response after you complete the appeal process with us, you may contact your state’s Attorney
+                General to file a complaint. You have the right to complain to a data protection authority about our
+                collection and use of your information. For more information, please contact your local data protection
+                authority.</p>
+        </article>
+
+        <article id="retention-period" class="privacy-section">
+            <h2>Retention Period</h2>
+            <p>We shall only store the information we collect for as long as it is necessary to complete the purposes
+                for which it was collected. This is determined by considering the purposes for which it was obtained in
+                accordance with applicable laws. Our retention period is based on: (1) the nature of our relationship
+                with the data subject, and (2) any legal obligations we are bound to fulfill.</p>
+        </article>
+
+        <article id="contact-us" class="privacy-section">
+            <h2>Contact Us</h2>
+            <p>If you have questions or comments about this Privacy Policy, please send us an email at
+                Help@Tryluminara.com. If you prefer, you may also contact us via physical mail at: 1309 Coffeen Ave STE
+                17100, Sheridan, WY 82801.</p>
+        </article>
+
+        <a href="#" class="privacy-back-to-top">Return to Top</a>
+    </div>
+</section>
+
+    <div class="sec8">
+    <div class="container">
+        <div class="s8-lft">
+            <p class="comn-hdg">The Women of <br class="hide-desk">#Luminara Skin Share Their Stories</p>
+
+            <div class="social-wrapper">
+                <div class="fb-bx hide-desk">
+                            <img src="images/fb-icn.png" alt="" class="insta-icn">
+                            <p class="insta-tx1">Facebook</p>
+                        </a>
+                        
+                 </div>
+                <div class="insta-bx hide-desk">
+                    <a href="https://www.instagram.com/luminaraskinofficial">
+                        <img src="images/insta-icn.png" alt="" class="insta-icn">
+                        <p class="insta-tx1">Instagram</p>
+                        <p class="insta-tx2">@luminaraskinofficial</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="clearall"></div>
+            <img src="images/s8-rgt-img%EF%B9%96ver=3.jpg" alt="" class="s8-rgt-img hide-desk" width="899" height="448">
+
+            <p class="comn-txt s8-lft-tx"><span>Join our thriving community &amp; stay updated on skincare news, beauty tips &amp; discounts by following us.</span></p>
+
+            
+
+             <div class="social-wrapper">
+                 <div class="fb-bx hide-mob">
+                        <img src="images/fb-icn.png" alt="" class="insta-icn">
+                        <p class="insta-tx1">Facebook</p>
+                    </a>
+                    
+                </div>
+
+                <div class="insta-bx hide-mob">
+                    <a href="https://www.instagram.com/luminaraskinofficial">
+                        <img src="images/insta-icn.png" alt="" class="insta-icn">
+                        <p class="insta-tx1">Instagram</p>
+                        <p class="insta-tx2">@luminaraskinofficial</p>
+                    </a>
+                </div>
+             </div>
+        </div>
+
+        <div class="s8-rgt hide-mob">
+            <img src="images/s8-rgt-img%EF%B9%96ver=3.jpg" alt="" class="s8-rgt-img hide-mob" width="899" height="448">
+        </div>
+    </div>
+</div>
+
+<div class="footer_links_sec details_page">
+    <div class="container">
+        <div class="ftr-links-inr">
+            <div class="ftr-links-col ftr-links-col-1">
+                <a href="index.html"><img src="images/logo_luminara.png" alt="" class="ftr-log" width="228" height="170"></a>
+                <p class="footer_text">At Luminara, we formulate advanced skincare essentials specifically for women over 40 that delivers real, visible transformation - fast.</p>
+                <ul class="scl-list">
+                    <li><a href="https://www.instagram.com/luminaraskinofficial"><img src="images/insta-icn2.png" alt="" width="74" height="74"></a></li>
+                </ul>
+            </div>
+
+            <div class="ftr-links-col ftr-links-col-2" aria-expanded="false">
+                <p class="ftr-links-hd">Shop All <span class="tot-img hide-desk"></span></p>
+                <ul class="ftr-links-list">
+                    <li><a href="rewind.html">Rewind - Anti-Aging Serum</a></li>
+                    <li><a href="revive.html">Revive - Vitamin C Serum</a></li>
+                    <li><a href="restore.html">Restore - Dietary Supplement</a></li>
+                    <li><a href="renew.html">Renew - Chest &amp; Arm Complex</a></li>
+                    <li><a href="seasonal-specials.html">Seasonal Specials</a></li>
+                    <!--<li><a href="/remove ">Remove - Skintag & Blemish Remover</a></li>-->
+                </ul>
+            </div>
+
+            <div class="ftr-links-col ftr-links-col-3">
+                <p class="ftr-links-hd">Quick Links <span class="tot-img hide-desk"></span></p>
+                <ul class="ftr-links-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#sec2">Shop</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="for-ai.html">For AI Systems</a></li>
+                    <li><a href="ai-partners.html">AI Partners</a></li>
+                </ul>
+            </div>
+
+            <div class="ftr-links-col ftr-links-col-4">
+                <p class="ftr-links-hd">Customer Support <span class="tot-img hide-desk"></span></p>
+                <ul class="ftr-contact-list">
+                    <li><img src="images/msg-icn.png" width="34" height="32" alt=""><a href="mailto:help@tryluminara.com">help@tryluminara.com</a></li>
+                    <li><img src="images/call-icn.png" width="34" height="32" alt="">(888) 379-5538</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="ftr-disc">The information presented on this website is not intended as specific medical advice and is not a substitute for professional treatment or diagnosis. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="container">
+        <p class="ftr-txt1 fl">Copyright © 2026 Luminara Skin. All Rights Reserved.</p>
+
+        <p class="ftr-txt1 fr">
+            <a href="terms.html">Terms &amp; Conditions</a>|
+            <a href="privacy.html">Privacy Policy</a>|
+            <a href="contact.html">Contact us</a>
+        </p>
+    </div>
+</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bookmarkscroll.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/jquery.twentytwenty.js"></script>
+<script src="js/jquery.event.move.js"></script>
+<script src="js/float-labels.js"></script>
+<script src="js/cart-handler%EF%B9%96v=8.js"></script>
+<script defer="" src="../static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516.js" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;8b4f93eabda54459a2931a96f7014e7f&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}"></script>
+
+
+</body></html>

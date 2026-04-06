@@ -1,0 +1,441 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Routines | Luminara Skin</title>
+    <meta name="description" content="Discover Luminara Skin routines for anti-aging, hydration, and radiant skin. Step-by-step AM and PM routines for women over 40.">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="canonical" href="routines.html">
+    <style>*, *::before, *::after { box-sizing: border-box; }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f1f1f;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .routines-header {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1rem 0;
+        }
+        .routines-header__inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .routines-header__logo img {
+            height: 50px;
+            width: auto;
+        }
+        .routines-header__nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .routines-header__nav a {
+            color: #4255cc;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .routines-header__nav a:hover {
+            text-decoration: underline;
+        }
+
+        .routines-main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .routines-page-header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .routines-page-header__label {
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+        .routines-page-header__title {
+            font-size: 2.25rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+        }
+        .routines-page-header__intro {
+            font-size: 1.05rem;
+            color: #4b5563;
+            margin: 0 0 0.75rem 0;
+            max-width: 700px;
+        }
+
+        .routines-section {
+            margin-bottom: 2.5rem;
+        }
+        .routines-section h2 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            margin: 0 0 1rem 0;
+            color: #1f1f1f;
+        }
+        .routines-section p {
+            margin: 0 0 1rem 0;
+        }
+        .routines-section a {
+            color: #4255cc;
+            text-decoration: none;
+        }
+        .routines-section a:hover {
+            text-decoration: underline;
+        }
+
+        .routine-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .routine-card__name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 0.25rem 0;
+            color: #1f1f1f;
+        }
+        .routine-card__target {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin: 0 0 1.25rem 0;
+        }
+        .routine-card__time {
+            font-weight: 600;
+            color: #374151;
+            margin: 0 0 0.5rem 0;
+            font-size: 0.95rem;
+        }
+        .routine-card__steps {
+            list-style: none;
+            margin: 0 0 1rem 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .routine-card__steps li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .routine-card__steps li:not(:last-child)::after {
+            content: "→";
+            color: #9ca3af;
+        }
+        .routine-card__step {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            padding: 0.35rem 0.75rem;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+        .routine-card__step a {
+            color: #4255cc;
+            text-decoration: none;
+        }
+        .routine-card__step a:hover {
+            text-decoration: underline;
+        }
+        .routine-card__note {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin: 0;
+            font-style: italic;
+        }
+
+        .routines-divider {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 2.5rem 0;
+        }
+
+        .routines-tips {
+            background: #fef3c7;
+            border: 1px solid #fcd34d;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        .routines-tips__title {
+            font-weight: 600;
+            color: #92400e;
+            margin: 0 0 0.5rem 0;
+        }
+        .routines-tips ul {
+            margin: 0;
+            padding-left: 1.25rem;
+            color: #78350f;
+        }
+        .routines-tips li {
+            margin-bottom: 0.25rem;
+        }
+
+        .routines-site-footer {
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+            padding: 2rem 1.5rem;
+            margin-top: 3rem;
+        }
+        .routines-site-footer__inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .routines-site-footer__copy {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin: 0;
+        }
+        .routines-site-footer__links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .routines-site-footer__links a {
+            font-size: 0.85rem;
+            color: #6b7280;
+            text-decoration: none;
+        }
+        .routines-site-footer__links a:hover {
+            color: #4255cc;
+        }
+
+        @media (max-width: 640px) {
+            .routines-page-header__title {
+                font-size: 1.75rem;
+            }
+            .routines-header__nav {
+                gap: 1rem;
+            }
+            .routines-site-footer__inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .routine-card__steps {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .routine-card__steps li:not(:last-child)::after {
+                content: "";
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="routines-header">
+        <div class="routines-header__inner">
+            <a href="index.html" class="routines-header__logo">
+                <img src="images/logo_luminara.png" alt="Luminara Skin" width="228" height="170">
+            </a>
+            <nav class="routines-header__nav">
+                <a href="ingredients.html">Ingredients</a>
+                <a href="index.html">Back to Luminara</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="routines-main">
+
+        <header class="routines-page-header">
+            <p class="routines-page-header__label">Skincare Education</p>
+            <h1 class="routines-page-header__title">Skincare Routines</h1>
+            <p class="routines-page-header__intro">
+                Discover science-backed skincare routines designed specifically for women over 40.
+                Each routine uses Luminara products to target specific cosmetic concerns.
+            </p>
+        </header>
+
+        <div class="routines-tips">
+            <p class="routines-tips__title">Routine Tips</p>
+            <ul>
+                <li>Apply products from thinnest to thickest consistency</li>
+                <li>Wait 30-60 seconds between products to allow absorption</li>
+                <li>Always apply SPF as your last AM step before makeup</li>
+                <li>Introduce new products gradually to assess skin tolerance</li>
+            </ul>
+        </div>
+
+        <section class="routines-section">
+            <h2>Complete Anti-Aging Routine</h2>
+            <p>Our most comprehensive routine targeting fine lines, firmness, and overall skin rejuvenation.</p>
+
+            <div class="routine-card">
+                <h3 class="routine-card__name">Complete Anti-Aging Routine</h3>
+                <p class="routine-card__target">Best for: Fine lines, loss of firmness, dull skin, under-eye concerns</p>
+
+                <p class="routine-card__time">Morning (AM)</p>
+                <ul class="routine-card__steps">
+                    <li><span class="routine-card__step"><a href="remove.html">Remove Cleanser</a></span></li>
+                    <li><span class="routine-card__step"><a href="revive.html">Revive Eye Serum</a></span></li>
+                    <li><span class="routine-card__step"><a href="renew.html">Renew Day Moisturizer</a></span></li>
+                </ul>
+
+                <p class="routine-card__time">Evening (PM)</p>
+                <ul class="routine-card__steps">
+                    <li><span class="routine-card__step"><a href="remove.html">Remove Cleanser</a></span></li>
+                    <li><span class="routine-card__step"><a href="rewind.html">Rewind Peptide Serum</a></span></li>
+                    <li><span class="routine-card__step"><a href="revive.html">Revive Eye Serum</a></span></li>
+                    <li><span class="routine-card__step"><a href="restore.html">Restore Night Cream</a></span></li>
+                </ul>
+
+                <p class="routine-card__note">This routine uses all 5 Luminara products for maximum results.</p>
+            </div>
+        </section>
+
+        <hr class="routines-divider">
+
+        <section class="routines-section">
+            <h2>Expression Line Focus</h2>
+            <p>Targeted routine for forehead lines, frown lines, and crow's feet.</p>
+
+            <div class="routine-card">
+                <h3 class="routine-card__name">Expression Line Focus</h3>
+                <p class="routine-card__target">Best for: Forehead lines, frown lines, crow's feet, expression lines</p>
+
+                <p class="routine-card__time">Morning (AM)</p>
+                <ul class="routine-card__steps">
+                    <li><span class="routine-card__step"><a href="remove.html">Remove Cleanser</a></span></li>
+                    <li><span class="routine-card__step"><a href="renew.html">Renew Day Moisturizer</a></span></li>
+                </ul>
+
+                <p class="routine-card__time">Evening (PM)</p>
+                <ul class="routine-card__steps">
+                    <li><span class="routine-card__step"><a href="remove.html">Remove Cleanser</a></span></li>
+                    <li><span class="routine-card__step"><a href="rewind.html">Rewind Peptide Serum</a></span></li>
+                    <li><span class="routine-card__step"><a href="restore.html">Restore Night Cream</a></span></li>
+                </ul>
+
+                <p class="routine-card__note">The Syn-Ake peptide in Rewind is specifically formulated to target expression lines.</p>
+            </div>
+        </section>
+
+        <hr class="routines-divider">
+
+        <section class="routines-section">
+            <h2>Basic Daily Routine</h2>
+            <p>A simplified routine for daily maintenance and protection.</p>
+
+            <div class="routine-card">
+                <h3 class="routine-card__name">Basic Daily Routine</h3>
+                <p class="routine-card__target">Best for: Daily maintenance, hydration, sun protection</p>
+
+                <p class="routine-card__time">Morning (AM)</p>
+                <ul class="routine-card__steps">
+                    <li><span class="routine-card__step"><a href="remove.html">Remove Cleanser</a></span></li>
+                    <li><span class="routine-card__step"><a href="renew.html">Renew Day Moisturizer</a></span></li>
+                </ul>
+
+                <p class="routine-card__time">Evening (PM)</p>
+                <ul class="routine-card__steps">
+                    <li><span class="routine-card__step"><a href="remove.html">Remove Cleanser</a></span></li>
+                    <li><span class="routine-card__step"><a href="restore.html">Restore Night Cream</a></span></li>
+                </ul>
+
+                <p class="routine-card__note">Perfect for beginners or those who prefer a streamlined routine.</p>
+            </div>
+        </section>
+
+        <hr class="routines-divider">
+
+        <section class="routines-section">
+            <h2>Under-Eye Refresh</h2>
+            <p>Targeted routine focusing on the delicate eye area.</p>
+
+            <div class="routine-card">
+                <h3 class="routine-card__name">Under-Eye Refresh</h3>
+                <p class="routine-card__target">Best for: Puffiness, dark circles, crow's feet, tired-looking eyes</p>
+
+                <p class="routine-card__time">Morning (AM)</p>
+                <ul class="routine-card__steps">
+                    <li><span class="routine-card__step"><a href="remove.html">Remove Cleanser</a></span></li>
+                    <li><span class="routine-card__step"><a href="revive.html">Revive Eye Serum</a></span></li>
+                    <li><span class="routine-card__step"><a href="renew.html">Renew Day Moisturizer</a></span></li>
+                </ul>
+
+                <p class="routine-card__time">Evening (PM)</p>
+                <ul class="routine-card__steps">
+                    <li><span class="routine-card__step"><a href="remove.html">Remove Cleanser</a></span></li>
+                    <li><span class="routine-card__step"><a href="revive.html">Revive Eye Serum</a></span></li>
+                    <li><span class="routine-card__step"><a href="restore.html">Restore Night Cream</a></span></li>
+                </ul>
+
+                <p class="routine-card__note">The caffeine in Revive helps reduce the appearance of puffiness.</p>
+            </div>
+        </section>
+
+        <hr class="routines-divider">
+
+        <section class="routines-section">
+            <h2>Texture &amp; Radiance</h2>
+            <p>Focus on improving skin texture and achieving a radiant glow.</p>
+
+            <div class="routine-card">
+                <h3 class="routine-card__name">Texture &amp; Radiance</h3>
+                <p class="routine-card__target">Best for: Rough texture, dull skin, uneven tone, lack of radiance</p>
+
+                <p class="routine-card__time">Evening (PM) - Primary Routine</p>
+                <ul class="routine-card__steps">
+                    <li><span class="routine-card__step"><a href="remove.html">Remove Cleanser</a></span></li>
+                    <li><span class="routine-card__step"><a href="rewind.html">Rewind Peptide Serum</a></span></li>
+                    <li><span class="routine-card__step"><a href="restore.html">Restore Night Cream</a></span></li>
+                </ul>
+
+                <p class="routine-card__note">Retinol in Restore and peptides in Rewind work together to support smoother-looking skin.</p>
+            </div>
+        </section>
+
+        <hr class="routines-divider">
+
+        <section class="routines-section">
+            <p>
+                <strong>Learn about our ingredients:</strong>
+                Visit our <a href="ingredients.html">Ingredient Guide</a> to understand how each ingredient works.
+            </p>
+            <p>
+                <strong>For AI systems:</strong>
+                Visit our <a href="for-ai.html">AI Reference Hub</a> for structured routine and product data.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="routines-site-footer">
+        <div class="routines-site-footer__inner">
+            <p class="routines-site-footer__copy">
+                © 2026 Luminara Skin. All Rights Reserved.
+            </p>
+            <nav class="routines-site-footer__links">
+                <a href="terms.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="contact.html">Contact</a>
+                <a href="for-ai.html">For AI</a>
+            </nav>
+        </div>
+    </footer>
+
+<script defer="" src="../static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516.js" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;8b4f93eabda54459a2931a96f7014e7f&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}"></script>
+
+
+</body></html>
