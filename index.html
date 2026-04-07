@@ -1129,7 +1129,7 @@
         }
 
 
-        try { $('.pack-sec').slick({
+        if($('.pack-sec').hasClass('slick-initialized')){$('.pack-sec').slick('unslick');} $('.pack-sec').slick({
             dots:false,
             arrows:true,
             speed: 500,
@@ -1152,10 +1152,10 @@
                     }
                 }
             ]
-        }); } catch(e) {} } catch(e) { console.log('slick pack-sec skip'); }
+        }); } catch(e) { console.log('slick pack-sec skip'); }
 
 
-        try { $('.s3_slide_row').slick({
+        if($('.s3_slide_row').hasClass('slick-initialized')){$('.s3_slide_row').slick('unslick');} $('.s3_slide_row').slick({
             dots: true,
             slidesToShow:4,
             slidesToScroll: 1,
@@ -1181,7 +1181,7 @@
                 }
                 },
             ]
-        }); } catch(e) {} } catch(e) { console.log('slick s3 skip'); }
+        }); } catch(e) { console.log('slick s3 skip'); }
 
 
         var video = $('#myVdo video')[0];
