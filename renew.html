@@ -1091,6 +1091,14 @@ $(function(){
         $(this).find('.pck-bx-rad').attr('checked', 'checked').prop('checked', true);
     });
 
+
+    /* ── Ingredients / How To Use toggle ── */
+    $(document).on('click', '.prod-det-s2-bx-hd', function(e){
+        var contBox = $(this).closest('.prod-det-s2-inr-bx');
+        contBox.find('.prod-det-s2-bx-cont').slideToggle();
+        contBox.find('.swap-icn').toggle();
+    });
+
     /* ── Option toggle (subscription vs one-time) ── */
     $(document).on('click', '.option_row', function(){
         $('.option_row').removeClass('active');
