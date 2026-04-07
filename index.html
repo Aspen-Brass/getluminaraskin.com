@@ -937,10 +937,7 @@
             } else {
                 toggleText.text("Add");
             }
-        });
-
-
-
+        }); } catch(e) {}
         if ( $(window).innerWidth() <= 767 ) {
             $('.ftr-links-hd').click(function(e) {
                 $(this).next('.ftr-links-list, .ftr-contact-list').slideToggle();
@@ -949,7 +946,7 @@
         }
 
 
-        $('.pack-sec').slick({
+        try { $('.pack-sec').slick({
             dots:false,
             arrows:true,
             speed: 500,
@@ -975,7 +972,7 @@
         }); } catch(e) { console.log('slick pack-sec skip'); }
 
 
-        $('.s3_slide_row').slick({
+        try { $('.s3_slide_row').slick({
             dots: true,
             slidesToShow:4,
             slidesToScroll: 1,
@@ -1020,24 +1017,10 @@
         $('.ugc-modal').removeClass('active');
         $('.video-container').hide();
         video.pause();
-        });
-
-
-        /*========accordion========*/
-        $(".acdn-heading").click(function() {
-
-            var questionDiv = $(this);
-            var answerDiv   = $(this).next('.acdn-content');
-            var idx = $('.acdn-content').index(answerDiv);
-
-            $('.acdn-content').each(function(index, ansDiv) {
-                if(index != idx && $(ansDiv).is(':visible')) {
-                    $(ansDiv).slideUp(500, function() {
-                        $(ansDiv).prev('.acdn-heading').removeClass('accordion-open');
-                    });
+        }); } catch(e) {}
+        
                 }
-            });
-
+            }); } catch(e) {}
             if (answerDiv.is(':visible')) {
                 answerDiv.stop().slideUp(500, function() {
                     questionDiv.removeClass('accordion-open');
@@ -1049,9 +1032,7 @@
         });
 
 
-    });
-
-
+    }); } catch(e) {}
     $(document).scroll(function(){
 
         if ($(this).scrollTop() > 40){
@@ -1067,5 +1048,33 @@
         }
 
     });
+</script>
+
+
+<script>
+$(function(){
+    $(".acdn-heading").click(function() {
+        var questionDiv = $(this);
+        var answerDiv = $(this).next(".acdn-content");
+        var idx = $(".acdn-content").index(answerDiv);
+
+        $(".acdn-content").each(function(index, ansDiv) {
+            if(index != idx && $(ansDiv).is(":visible")) {
+                $(ansDiv).slideUp(500, function() {
+                    $(ansDiv).prev(".acdn-heading").removeClass("accordion-open");
+                });
+            }
+        });
+
+        if (answerDiv.is(":visible")) {
+            answerDiv.stop().slideUp(500, function() {
+                questionDiv.removeClass("accordion-open");
+            });
+        } else {
+            questionDiv.addClass("accordion-open");
+            answerDiv.stop().slideDown(500);
+        }
+    });
+});
 </script>
 </body></html>

@@ -890,9 +890,7 @@
             } else {
                 toggleText.text("Add");
             }
-        });
-
-
+        }); } catch(e) {}
         if ( $(window).innerWidth() <= 767 ) {
             $('.ftr-links-hd').click(function(e) {
                 $(this).next('.ftr-links-list, .ftr-contact-list').slideToggle();
@@ -946,7 +944,7 @@
             $(this).addClass('active');
         });
 
-        $('.prd-sldr').slick({
+        try { $('.prd-sldr').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows:false,
@@ -956,7 +954,7 @@
             dots: false,
         });
 
-        $('.thumb-sldr').slick({
+        try { $('.thumb-sldr').slick({
             slidesToShow:4,
             asNavFor: '.prd-sldr',
             dots: false,
@@ -975,7 +973,7 @@
             });
 
 
-        $('.pack-sec').slick({
+        try { $('.pack-sec').slick({
             dots:false,
             arrows:true,
             speed: 500,
@@ -1000,8 +998,7 @@
             ]
         });
 
-    });
-
+    }); } catch(e) {}
     $(document).scroll(function(){
 
         if ($(this).scrollTop() > 40){
@@ -1016,13 +1013,38 @@
             $('.mobilemenu').removeClass('mobimenu-top');
         }
 
-    });
-
+    }); } catch(e) {}
     $(document).ready(function(e) {
                     content_type: 'product',
                     content_name: 'Rewind',
                 });
             }
         });
+</script>
+<script>
+$(function(){
+    $(".acdn-heading").click(function() {
+        var questionDiv = $(this);
+        var answerDiv = $(this).next(".acdn-content");
+        var idx = $(".acdn-content").index(answerDiv);
+
+        $(".acdn-content").each(function(index, ansDiv) {
+            if(index != idx && $(ansDiv).is(":visible")) {
+                $(ansDiv).slideUp(500, function() {
+                    $(ansDiv).prev(".acdn-heading").removeClass("accordion-open");
+                });
+            }
+        });
+
+        if (answerDiv.is(":visible")) {
+            answerDiv.stop().slideUp(500, function() {
+                questionDiv.removeClass("accordion-open");
+            });
+        } else {
+            questionDiv.addClass("accordion-open");
+            answerDiv.stop().slideDown(500);
+        }
+    });
+});
 </script>
 </body></html>
