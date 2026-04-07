@@ -893,6 +893,33 @@ $(function(){
         $(this).find('.pck-bx-rad').attr('checked', 'checked').prop('checked', true);
     });
 
+
+    /* ── CTA → checkout with UTM passthrough ── */
+    $(document).on('click', '#cart_btn2, .prod-det-s1-btn', function(e){
+        e.preventDefault();
+        var active = $('.otp-pkg:visible .package_col.active, .sub-pkg:visible .package_col.active').first();
+        if(!active.length) active = $('.package_col.active').first();
+        var productId = active.data('crm_product_id') || '';
+        var qty = active.data('qty') || '';
+        var offer = active.data('offer') || '';
+        
+        /* Build checkout URL with product + all UTMs from current page */
+        var p = new URLSearchParams(window.location.search);
+        var u = new URLSearchParams();
+        u.set('products', productId);
+        
+        /* Pass through all URL params */
+        p.forEach(function(val, key){ u.set(key, val); });
+        
+        /* Ensure key UTM params are set */
+        var utmKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term',
+                       'click_id','sub1','sub2','sub3','sub4','sub5','affiliate','aff',
+                       'ob_click_id','ad_id','pub_id'];
+        utmKeys.forEach(function(k){ if(p.get(k)) u.set(k, p.get(k)); });
+        
+        window.location.href = 'https://checkout.getluminaraskin.com/vsl/checkout?' + u.toString();
+    });
+
     /* ── Option toggle (subscription vs one-time) ── */
     $(document).on('click', '.option_row', function(){
         $('.option_row').removeClass('active');
