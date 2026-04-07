@@ -316,41 +316,47 @@
 
 
 
+
 <script>
 $(function(){
-    /* ── Thumbnail clicks → change main image ── */
-    $('.thum-sldr-inr, .prd-thumb').on('click', function(){
-        var idx = $(this).closest('[data-slick-index]').data('slick-index');
-        if(typeof idx === 'undefined') {
-            idx = $(this).parent().children().index($(this).closest('.thum-sldr-inr, [data-slick-index]'));
-        }
-        /* Try slick goTo, fallback to manual */
-        try {
-            if($('.prd-sldr').hasClass('slick-initialized')) {
-                $('.prd-sldr').slick('slickGoTo', idx);
-                return;
-            }
-        } catch(e) {}
-        /* Manual fallback: hide all slides, show clicked one */
-        var slides = $('.prd-sldr .prd-sldr-inr, .prd-sldr [data-slick-index]:not(.slick-cloned)');
-        if(slides.length) {
-            slides.each(function(i){
-                if(i === idx) {
-                    $(this).show().css({opacity:1, position:'relative', left:0});
-                } else {
-                    $(this).hide();
-                }
-            });
-        }
+    /* ── Thumbnail clicks → change main slider image ── */
+    $(document).on('click', '.thum-sldr-inr, .prd-thumb', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        
+        /* Find which thumbnail index was clicked */
+        var thumbSlide = $(this).closest('[data-slick-index]');
+        var idx = parseInt(thumbSlide.data('slick-index'));
+        if(isNaN(idx)) idx = 0;
+        
+        /* Count cloned slides before real slides to calculate offset */
+        var track = $('.prd-sldr .slick-track');
+        var slideWidth = track.find('[data-slick-index="0"]').outerWidth(true) || 562;
+        var firstClone = track.find('.slick-cloned:first');
+        var cloneCount = track.find('.slick-cloned[data-slick-index^="-"]').length;
+        var offset = -1 * (idx + cloneCount) * slideWidth;
+        
+        /* Move main slider track */
+        track.css('transform', 'translate3d(' + offset + 'px, 0px, 0px)');
+        
+        /* Update active classes on main slider */
+        $('.prd-sldr .slick-slide').removeClass('slick-current slick-active').attr('aria-hidden','true');
+        $('.prd-sldr .slick-slide[data-slick-index="' + idx + '"]').addClass('slick-current slick-active').attr('aria-hidden','false');
+        
+        /* Update active classes on thumbnail slider */
+        $('.thumb-sldr .slick-slide').removeClass('slick-current slick-active');
+        thumbSlide.addClass('slick-current slick-active');
+        
+        return false;
     });
 
     /* ── Package quantity selector ── */
-    $(document).on('click', '.package_col', function(){
+    $(document).on('click', '.package_col', function(e){
         var row = $(this).closest('.package_row');
         row.find('.package_col').removeClass('active');
         $(this).addClass('active');
-        row.find('.pck-bx-rad').removeAttr('checked');
-        $(this).find('.pck-bx-rad').attr('checked', 'checked');
+        row.find('.pck-bx-rad').removeAttr('checked').prop('checked', false);
+        $(this).find('.pck-bx-rad').attr('checked', 'checked').prop('checked', true);
     });
 
     /* ── Option toggle (subscription vs one-time) ── */
@@ -367,4 +373,5 @@ $(function(){
     });
 });
 </script>
+
 </body></html>
