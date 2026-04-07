@@ -576,7 +576,7 @@
             </ul>
         </div>
     </div>
-    <div class="sec3">
+<!--    <div class="sec3">
         <div class="container">
             <p class="comn-hdg">Women Are Raving <br class="hide-desk">About Luminara</p>
             <div class="s3_slide_row slick-initialized slick-slider slick-dotted"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 5274px; transform: translate3d(-1172px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-4" id="" aria-hidden="true" tabindex="-1" style="width: 263px;"><div><div class="s3_slide_col ugc1" data-vdo="/assets/videos/4.mov" style="width: 100%; display: inline-block;">
@@ -635,7 +635,7 @@
                 <img src="images/video-play.png" alt="" class="ugc-play" width="74" height="74">
             </div></div></div></div></div><ul class="slick-dots" role="tablist" style=""><li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control10" aria-controls="slick-slide10" aria-label="1 of 2" tabindex="0" aria-selected="true">1</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control11" aria-controls="slick-slide11" aria-label="2 of 2" tabindex="-1">2</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control12" aria-controls="slick-slide12" aria-label="3 of 2" tabindex="-1">3</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control13" aria-controls="slick-slide13" aria-label="4 of 2" tabindex="-1">4</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control14" aria-controls="slick-slide14" aria-label="5 of 2" tabindex="-1">5</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control15" aria-controls="slick-slide15" aria-label="6 of 2" tabindex="-1">6</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control16" aria-controls="slick-slide16" aria-label="7 of 2" tabindex="-1">7</button></li></ul></div>
         </div>
-    </div>
+    </div>-->
     <div class="clearall"></div>
     <div class="sec4" id="about">
         <div class="container">
@@ -1129,7 +1129,7 @@
         }
 
 
-        $('.pack-sec').slick({
+        try { $('.pack-sec').slick({
             dots:false,
             arrows:true,
             speed: 500,
@@ -1152,10 +1152,10 @@
                     }
                 }
             ]
-        });
+        }); } catch(e) { console.log('slick pack-sec skip'); }
 
 
-        $('.s3_slide_row').slick({
+        try { $('.s3_slide_row').slick({
             dots: true,
             slidesToShow:4,
             slidesToScroll: 1,
@@ -1181,7 +1181,7 @@
                 }
                 },
             ]
-        });
+        }); } catch(e) { console.log('slick s3 skip'); }
 
 
         var video = $('#myVdo video')[0];
