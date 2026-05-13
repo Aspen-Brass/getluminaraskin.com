@@ -522,4 +522,51 @@ $(function(){
 });
 </script>
 
+<script>
+/* ── PX BEACON — first-touch click + pdp_view event (additive; safe vs existing CTA JS) ── */
+(function(){
+    try {
+        var p = new URLSearchParams(window.location.search);
+        var cid = p.get('sub2') || p.get('obclick') || p.get('click_id') || '';
+        if (!cid) return;  /* no click_id -> no meaningful click row */
+        var src = p.get('affiliate') || p.get('aff') || p.get('sub1') || p.get('utm_source') || 'direct';
+        var PX  = 'https://api.aspenbrass.com/px.php';
+
+        function fireClick() {
+            var d = ['cid='+encodeURIComponent(cid),
+                     'src='+encodeURIComponent(src),
+                     'lp='+encodeURIComponent(location.pathname),
+                     'ref='+encodeURIComponent(document.referrer || ''),
+                     'cmp='+encodeURIComponent(p.get('utm_campaign')||''),
+                     'cnt='+encodeURIComponent(p.get('utm_content')||''),
+                     'med='+encodeURIComponent(p.get('utm_medium')||''),
+                     'trm='+encodeURIComponent(p.get('utm_term')||''),
+                     'offer=luminara',
+                     'ver=pdp'];
+            ['affiliate','aff','sub1','sub2','sub3','sub4','sub5'].forEach(function(k){
+                var v = p.get(k);
+                if (v) d.push(k+'='+encodeURIComponent(v));
+            });
+            new Image().src = PX + '?' + d.join('&');
+        }
+        function fireEvt(evtType, val, lbl) {
+            var d = ['evt='+encodeURIComponent(evtType),
+                     'cid='+encodeURIComponent(cid),
+                     'src='+encodeURIComponent(src),
+                     'lp='+encodeURIComponent(location.pathname),
+                     'val='+encodeURIComponent(val||''),
+                     'lbl='+encodeURIComponent(lbl||''),
+                     'offer=luminara',
+                     'ver=pdp'];
+            new Image().src = PX + '?' + d.join('&');
+        }
+        fireClick();
+        fireEvt('pdp_view', location.href, document.referrer);
+        window._lumPdpFireEvt = fireEvt;
+    } catch (e) {
+        /* Tracking failures MUST NOT break the page or checkout flow. */
+        try { if (window.console) console.warn('lum px beacon error', e); } catch(_) {}
+    }
+})();
+</script>
 </body></html>
